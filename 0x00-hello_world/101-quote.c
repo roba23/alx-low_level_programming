@@ -7,6 +7,6 @@
 int main(void)
 {
 	fprintf(stderr, "%s", "and that piece of art is useful\" ");
-	fprintf(stderr, "%c %s %s", '-', "Dora korpar,", "2015-10-19");
+	fprintf(stderr, "%c %s %s", '-', " Dora korpar,", "2015-10-19");
 	return (1);
 }
