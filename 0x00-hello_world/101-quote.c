@@ -8,5 +8,5 @@ int main(void)
 {
 	fprintf(stderr, "%s", "and that piece of art is useful\"");
 	fprintf(stderr, "%c %s %s", '-', "Dora korpar", "2015-10-19");
-	return (0);
+	return (1);
 }
