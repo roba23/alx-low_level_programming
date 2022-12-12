@@ -1,11 +1,15 @@
 #include <stdio.h>
 /**
- * main - Prints the numbers from 0-9.
-(*
- * Return: 0 on success
+ * main-prints numbers from 0 to 9
+ *
+ * Return:return 0 if succesfull
  */
 int main(void)
 {
-	printf("0123456789\n");
+	int n;
+
+	for (n = 0; n < 10; n++)
+		printf("%d", n);
+	printf("\n");
 	return (0);
 }
