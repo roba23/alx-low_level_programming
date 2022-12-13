@@ -17,7 +17,7 @@ void jack_bauer(void)
 			{
 				for (d = 0; d <= 9 ; d++)
 				{
-					if ( a == 2 && b > 3)
+					if (a == 2 && b > 3)
 						continue;
 
 					printf("%d%d:%d%d\n", a, b, c, d);
