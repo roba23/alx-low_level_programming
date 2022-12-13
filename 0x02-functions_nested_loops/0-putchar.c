@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char m[] = "_putchar";
+	char m[9] = "_putchar";
 	int i;
 	int length = sizeof(m) / sizeof(m[0]);
 
