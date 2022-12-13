@@ -11,11 +11,7 @@
  */
 int _islower(int c)
 {
-	int ret;
-	char m=(char)c;
-
-	ret = islower(m);
-	return (ret);
+	return (islower(c));
 }
 
 
