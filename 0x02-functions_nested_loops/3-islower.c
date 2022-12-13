@@ -1,18 +1,18 @@
-#include "main.h"
 #include <ctype.h>
+#include <stdio.h>
 /**
- * _islower - determines wether a number
- * is lower case or not
- * @c: integer
- * 
+ * _islower - main 
+ * @c:integer value
  *
- * Return: return 1 if c is lowercase
- * return 0 otherwise
+ * Return: 0 if sucessfull
  */
 int _islower(int c)
 {
-	return (islower(c));
+	int m = islower(c);
+	int j;
+	if (m ==0)
+		j=0;
+	else if (m != 0)
+		j=1;
+	return(j);
 }
-
-
-
