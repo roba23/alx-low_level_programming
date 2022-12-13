@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_last_digit - prints the last digit of a number
  * @m:the number to find the last digit of
@@ -10,7 +10,7 @@ int print_last_digit(int m)
 {
 	int d;
 
-	d = m % 10;
+	d = abs(m % 10);
 	_putchar(d + '0');
 	return (d);
 }
