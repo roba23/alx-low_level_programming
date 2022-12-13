@@ -4,6 +4,7 @@
  * _islower - determines wether a number
  * is lower case or not
  * @c: integer
+ * 
  *
  * Return: return 1 if c is lowercase
  * return 0 otherwise
@@ -11,8 +12,9 @@
 int _islower(int c)
 {
 	int ret;
+	char m=(char)c;
 
-	ret = islower(c);
+	ret = islower(m);
 	return (ret);
 }
 
