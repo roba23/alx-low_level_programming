@@ -12,6 +12,7 @@ int _isalpha(int c)
 {
 	int d = isalpha(c);
 	int m;
+
 	if (d == 0)
 		m = 0;
 	else
