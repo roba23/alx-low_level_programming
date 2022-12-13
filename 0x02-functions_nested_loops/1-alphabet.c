@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - function prints alphabet in
+ * print_alphabet - function prints alphabet in
  * lower case and then a new line
  *
- * Return: 0 if succesful.
- * error, print 1
+ * Return: nothing to return
  */
 void print_alphabet(void)
 {
