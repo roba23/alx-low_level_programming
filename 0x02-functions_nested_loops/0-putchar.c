@@ -8,12 +8,11 @@
  */
 int main(void)
 {
-	char m[9] = "_putchar";
+	char m[9] = "_putchar\n";
 	int i;
 	int length = sizeof(m) / sizeof(m[0]);
 
 	for (i = 0; i < length; i++)
 		_putchar(m[i]);
-	_putchar('\n');
 	return (0);
 }
