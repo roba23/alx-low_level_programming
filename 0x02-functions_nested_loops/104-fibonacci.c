@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int i, j, sum, d;
+	long int i, j, sum, d;
 
 	i = 0;
 	j = 1;
@@ -15,7 +15,7 @@ int main(void)
 	for (d = 0; d < 98; d++)
 	{
 		sum = i + j;
-		printf("%d, ", sum);
+		printf("%ld, ", sum);
 		i = j;
 		j = sum;
 	}
