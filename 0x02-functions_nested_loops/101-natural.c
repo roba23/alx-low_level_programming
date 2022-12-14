@@ -8,13 +8,18 @@ int main(void)
 {
 	int i, rem1, rem2, sum;
 
-	for (i = 0; i < 1024; i++)
+	sum = 0;
+	for (i = 1; i < 1024; ++i)
 	{
 		rem1 = i % 3;
 		rem2 = i % 5;
 		if (rem1 == 0 || rem2 == 0)
 		{	
 			sum += i;
+		}
+		else
+		{
+			sum += 0;
 		}
 
 	}
