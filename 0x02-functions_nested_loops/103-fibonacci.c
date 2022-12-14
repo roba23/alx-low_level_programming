@@ -9,7 +9,7 @@ int main(void)
 	long int i, j, sum, temp;
 
 	i = 0;
-	j = 0;
+	j = 1;
 	sum = 0;
 	temp = 0;
 	while (sum < 4000000)
