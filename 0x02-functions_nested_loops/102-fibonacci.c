@@ -14,11 +14,11 @@ int main(void)
 	{
 		sum = i + j;
 		if (d == 0)
-			printf("%1ld,", sum);
+			printf("%3ld,", sum);
 		else if (d < 49) 
-			printf("%1ld,", sum);
+			printf("%3ld,", sum);
 		else if (d == 49)
-			printf("%1ld", sum);
+			printf("%3ld", sum);
 		i = j;
 		j = sum;
 	}
