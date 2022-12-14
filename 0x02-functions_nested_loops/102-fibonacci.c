@@ -19,7 +19,6 @@ int main(void)
 			printf("%2ld,", sum);
 		else if (d == 49)
 			printf("%2ld", sum);
-		temp = i;
 		i = j;
 		j = sum;
 	}
