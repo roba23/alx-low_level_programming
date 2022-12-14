@@ -5,15 +5,21 @@
  */
 int main(void)
 {
-	int i, j, temp, d;
+	int i, j, temp, d, sum;
 
-	i = 1;
+	i = 0;
 	j = 1;
-	for (d = 0; d < 100; d++)
+	sum = 0;
+	for (d = 0; d < 50; d++)
 	{
-		temp = i + j;
+		sum = i + j;
+		if (d == 0)
+			printf("%d,", sum);
+		else 
+			printf("%2d,", sum);
+		temp = i;
 		i = j;
-		j = temp;
+		j = sum;
 	}
 	printf("%d\n", temp);
 	return (0);
