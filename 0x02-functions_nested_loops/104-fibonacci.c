@@ -15,7 +15,7 @@ int main(void)
 	for (d = 0; d < 98; d++)
 	{
 		sum = i + j;
-		printf("%.20ld, ", sum);
+		printf("%s, ", sum);
 		i = j;
 		j = sum;
 	}
