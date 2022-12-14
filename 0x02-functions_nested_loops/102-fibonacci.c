@@ -18,7 +18,7 @@ int main(void)
 		else if (d < 49) 
 			printf("%1ld, ", sum);
 		else if (d == 49)
-			printf("%ld ", sum);
+			printf("%ld", sum);
 		i = j;
 		j = sum;
 	}
