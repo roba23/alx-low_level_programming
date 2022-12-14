@@ -20,7 +20,7 @@ void print_times_table(int n)
 				if (j == n)
 					printf("%4d", mul);
 				else if (j == 0)
-					printf("%d", mul);
+					printf("%d,", mul);
 				else
 					printf("%4d,", mul);
 
