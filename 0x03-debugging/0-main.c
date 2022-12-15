@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * main - function tests the 
+ * main - function tests the
  * positive or negative for zero
  * Return: return 0 if sucessfull
  */
