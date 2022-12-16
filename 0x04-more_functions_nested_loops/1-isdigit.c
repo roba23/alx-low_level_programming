@@ -1,5 +1,6 @@
-#include "main.h"
 #include <ctype.h>
+#include "main.h"
+
 /**	
  * _isdigit - determines if an input is digit or not
  * @c: input in number format
