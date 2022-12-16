@@ -21,7 +21,10 @@ void more_numbers(void)
 	{
 		for (j = 0; j <= 14; j++)
 		{
-			print_long(j);
+			if (j == 0)
+				_putchar(j + '0');
+			else
+				print_long(j);
 		}
 	_putchar('\n');		
 	}
