@@ -1,5 +1,6 @@
-#include "main.h"
 #include <ctype.h>
+#include "main.h"
+
 /**
  * _isupper - determines if a character is upper or
  * or lower case
