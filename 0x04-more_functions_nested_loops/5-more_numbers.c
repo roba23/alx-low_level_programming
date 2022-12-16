@@ -4,15 +4,24 @@
  * ten times followed by a new line
  * Return: void
  */
+void print_long(int value) 
+{
+
+	if(value != 0) 
+	{
+		print_long(value/10);
+	        _putchar((value%10) + '0');
+	}			   
+}
 void more_numbers(void)
 {
 	int i, j;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 14; j++)
+		for (j = 0; j <= 14; j++)
 		{
-			_putchar(j + '00');
+			print_long(j);
 		}
 	_putchar('\n');		
 	}
