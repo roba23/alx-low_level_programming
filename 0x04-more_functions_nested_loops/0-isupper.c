@@ -1,17 +1,23 @@
 #include "main.h"
 #include <ctype.h>
-
 /**
- * _isupper - determines wether a character is
- * uper or lower case
- * @c: input in number format
- * Return: 1 if uppercase
- * 0 otherwise
+ * _isupper - determines if a character is upper or
+ * or lower case
+ * @c: input in number formar
+ * Return: return 1 if upper case 
+ *  for any other case
  */
 int _isupper(int c)
 {
-	if (isupper(c) != 0)
-		return (1);
+	int m;
+
+	m = isupper(c);
+	if (m != 0)
+	{
+		return (m);
+	}
 	else
+	{
 		return (0);
+	}
 }
