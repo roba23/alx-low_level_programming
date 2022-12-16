@@ -4,15 +4,6 @@
  * ten times followed by a new line
  * Return: void
  */
-void print_long(int value) 
-{
-
-	if(value != 0) 
-	{
-		print_long(value/10);
-	        _putchar((value%10) + '0');
-	}			   
-}
 void more_numbers(void)
 {
 	int i, j;
@@ -26,6 +17,21 @@ void more_numbers(void)
 			else
 				print_long(j);
 		}
-	_putchar('\n');		
+	_putchar('\n');
 	}
 }
+/**
+ * print_long - prints long ntegers with morethan two decimals
+ * @value:the value to be printed
+ * Return: void
+ */
+void print_long(int value)
+{
+
+	if (value != 0)
+	{
+		print_long(value / 10);
+		_putchar((value % 10) + '0');
+	}
+}
+
