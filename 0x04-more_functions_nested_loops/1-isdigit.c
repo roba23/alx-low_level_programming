@@ -12,7 +12,7 @@ int _isdigit(int c)
 	int m;
 
 	m = isdigit(c); 
-	if (c != 0)
+	if (m != 0)
 		return (1);
 	else 
 		return (0);
