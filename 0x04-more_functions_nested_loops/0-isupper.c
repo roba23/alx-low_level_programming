@@ -1,5 +1,5 @@
 #include <ctype.h>
-#include "main.h"
+#include "main.h" 
 
 /**
  * _isupper - determines if a character is upper or
@@ -15,7 +15,7 @@ int _isupper(int c)
 	m = isupper(c);
 	if (m != 0)
 	{
-		return (m);
+		return (1);
 	}
 	else
 	{
