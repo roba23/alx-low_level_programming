@@ -1,8 +1,8 @@
 #include "main.h"
 #include <string.h>
 /**
- * rev_string - reverses a string.
- * @s: input string to reverse.
+ * puts2 - reverses a string.
+ * @str: input string to reverse.
  */
 void puts2(char *str)
 {
@@ -10,7 +10,7 @@ void puts2(char *str)
 
 	i = 0;
 	size = strlen(str) - 1;
-        while(i <= size)
+	while (i <= size)
 	{
 		_putchar(str[i]);
 		i += 2;
