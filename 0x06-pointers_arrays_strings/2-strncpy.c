@@ -1,6 +1,6 @@
 #include <string.h>
 /**
- * _strncat - cotancate two strings
+ * _strncpy - cotancate two strings
  * @src:  source string
  * @dest: destination to be copied to
  * @n: number of bytes to be copied
