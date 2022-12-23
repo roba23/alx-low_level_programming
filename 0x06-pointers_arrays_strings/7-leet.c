@@ -16,10 +16,12 @@ char *leet(char *a)
 	printf("size:%ld\n", size);
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 10; j++)
 		{
 			if (a[i] == c[j])
+			{
 				a[i] = r[j / 2];
+			}
 
 		}
 	}
