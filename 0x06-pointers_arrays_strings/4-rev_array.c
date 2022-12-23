@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * reverse_arry - function to reverse an array
+ * reverse_array - function to reverse an array
  * @a: array to be reversed
  * @n: the size of tghe array
  * Return: nothing
