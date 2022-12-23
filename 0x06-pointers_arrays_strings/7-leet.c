@@ -10,7 +10,7 @@ char *leet(char *a)
 {
 	char c[10] = "aAeEoOtTlL";
 	char r[5] = "43071";
-        long int i, j, size;
+	long int i, j, size;
 
 	size = strlen(a);
 	printf("size:%ld\n", size);
