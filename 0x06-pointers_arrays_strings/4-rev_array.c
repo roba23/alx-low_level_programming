@@ -12,9 +12,7 @@ void reverse_array(int *a, int n)
 	int size;
 
 	size = sizeof(a) / sizeof(int *);
-	if (n != size)
-		n = size;
-	for (i = 0; i <= n / 2; i++)
+	for (i = 0; i <= size / 2; i++)
 	{
 		temp = a[i];
 		a[i] = a[n - 1 - i];
