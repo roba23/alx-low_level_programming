@@ -10,10 +10,9 @@ char *leet(char *a)
 {
 	char c[] = "aAeEoOtTlL";
 	char r[] = "43071";
-	long int i, j, size;
+	int i, j;
 
-	size = strlen(a);
-	printf("size:%ld\n", size);
+	i = 0;
 	for (i = 0; a[i] != '\0'; i++)
 	{
 		for (j = 0; c[j] != '\0'; j++)
