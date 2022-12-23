@@ -8,15 +8,15 @@
  */
 char *leet(char *a)
 {
-	char c[10] = "aAeEoOtTlL";
-	char r[5] = "43071";
+	char c[] = "aAeEoOtTlL";
+	char r[] = "43071";
 	long int i, j, size;
 
 	size = strlen(a);
 	printf("size:%ld\n", size);
-	for (i = 0; i < size; i++)
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; c[j] != '\0'; j++)
 		{
 			if (a[i] == c[j])
 			{
