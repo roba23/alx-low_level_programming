@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strchr - locate a character in a string
  * @s: the string to be checked
@@ -6,10 +7,9 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *p;
+	char *p = NULL;
 	int i;
 
-	p = '\0';
 	i = 0;
 	while (s[i] != '\0')
 	{
