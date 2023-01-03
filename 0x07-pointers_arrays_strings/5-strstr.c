@@ -16,6 +16,8 @@ char *_strstr(char *haystack, char *needle)
 	p = NULL;
 	len = strlen(haystack);
 	len2 = strlen(needle);
+	if (len2 == 0)
+		return (p);
 	for (i = 0; i < len;)
 	{
 		j = 0;
