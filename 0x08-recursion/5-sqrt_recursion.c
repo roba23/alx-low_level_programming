@@ -19,7 +19,7 @@ int find_root(int i, int n)
 {
 	if (i * i == n)
 		return (n);
-	else if (i * i > n)
+	if (i * i > n)
 		return (-1);
 	return (find_root(i + 1, n));
 }
