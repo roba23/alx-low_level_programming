@@ -2,7 +2,7 @@
  * find_if_prime - check wether a number is prime or not
  * @i: iteration
  * @n:number to be checked
- * Return : 1 if it is prime 
+ * Return : 1 if it is prime
  * 0 if it is not
  */
 int find_if_prime(int i, int n)
@@ -16,9 +16,9 @@ int find_if_prime(int i, int n)
 	return (1);
 }
 /**
- * _is_prime_number - determine of a number is prime or not
+ * is_prime_number - determine of a number is prime or not
  * @n:number
- * Retrun : 1 if prime
+ * Return: 1 if prime
  * 0 if not prime
  */
 int is_prime_number(int n)
