@@ -1,6 +1,7 @@
 /**
  * factorial - find factorial of a number
  * @n: the number
+ * Return: the factorial
  */
 int factorial(int n)
 {
