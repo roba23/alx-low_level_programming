@@ -1,8 +1,8 @@
 /**
  * find_if_prime - check wether a number is prime or not
  * @i: iteration
- * @n:number to be checked
- * Return : 1 if it is prime
+ * @n: number to be checked
+ * Return: 1 if it is prime
  * 0 if it is not
  */
 int find_if_prime(int i, int n)
