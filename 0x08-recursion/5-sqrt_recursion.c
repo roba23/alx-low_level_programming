@@ -5,7 +5,7 @@
  * Return: return the root of a number
  * -1 if it does not have any root
  */
-inf find_root(int i, int n);
+int find_root(int i, int n);
 int _sqrt_recursion(int n)
 {
 	return (find_root(1, n));
