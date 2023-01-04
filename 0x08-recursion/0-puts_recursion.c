@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - print a long string using Putchar 
+ * _puts_recursion - print a long string using Putchar
  * and recursion
  * @s: string to be printed
  * Return: nothing
