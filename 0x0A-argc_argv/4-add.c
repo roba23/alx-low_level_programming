@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - print addition of argument
  * @argc: count arguments passed to a main function
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]))
+			if (isdigit(argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
