@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - print addition of arguments
+ * main - print addition of argument
  * @argc: count arguments passed to a main function
  * @argv: an array containing values of the arguments
  * Return: return 0 if succesfull
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) > 0)
+			if (atoi(argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
