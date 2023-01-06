@@ -1,1 +1,1 @@
-Creating static libraries
+readme file for static library`
