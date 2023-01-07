@@ -15,16 +15,16 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);	
 	}
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0)
+		if (*argv[i] == '0')
 			sum += 0;
 		else if (atoi(argv[i]))
 			sum += atoi(argv[i]);
-		else 
+		else
 		{
 			printf("Error\n");
-				return (1);
+			return (1);
 		}	
 	}
 	printf("%d\n", sum);
