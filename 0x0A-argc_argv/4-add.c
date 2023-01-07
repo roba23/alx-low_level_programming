@@ -27,7 +27,11 @@ int checker(int argc, int i, unsigned int j, char *argv[])
 int main(int argc, char *argv[])
 {
 	int result, i;
-
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
 	result = 0;
 	if (checker(argc, 1, 0, argv) == 1)
 	{
