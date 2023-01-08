@@ -3,7 +3,7 @@
 #include <ctype.h>
 /**
  * cent - convert dollar to number of cents
- * @a - dollar bill
+ * @a:  dollar bill
  * Return: number of cents
  */
 int cent(char *a)
