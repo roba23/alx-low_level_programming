@@ -20,7 +20,7 @@ char *create_array(int size, char c)
 	if (m == NULL)
 	{
 		printf("memory not allocated");
-		return (1);
+		return (NULL);
 	}
 	for (i = 0; i < size; i++)
 	{
