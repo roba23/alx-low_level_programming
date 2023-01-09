@@ -1,6 +1,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * create_array - create an array and initialize it using malloc
  * @size:size of array
