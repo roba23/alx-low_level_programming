@@ -18,7 +18,10 @@ char *create_array(int size, char c)
 		return (NULL);
 	m = malloc(size * sizeof(char));
 	if (m == NULL)
+	{
 		printf("memory not allocated");
+		return (1);
+	}
 	for (i = 0; i < size; i++)
 	{
 		m[i] = c;
