@@ -11,7 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int s1count, s2count, sizeBuffer, i, j;
+	unsigned int s1_length, s2_length, sizeBuffer, i, j;
 
 	i = j = 0;	
 	if (s1 == NULL)
