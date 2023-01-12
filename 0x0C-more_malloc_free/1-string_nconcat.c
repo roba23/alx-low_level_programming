@@ -26,7 +26,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	p = malloc((s1_length + s2_length + 1) * sizeof(char));
 	if (p == NULL)
 	{
-		free(p);
 		return (NULL);
 	}
 	if (n >= s2_length)
@@ -40,6 +39,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		else
 			p[j + s1_length] = s2[j];
 	}
-	free(p);
 	return (p);
 }
