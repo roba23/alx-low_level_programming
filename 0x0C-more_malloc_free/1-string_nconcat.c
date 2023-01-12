@@ -8,11 +8,11 @@
  * @n: number of bytes to concatenate to string 1
  * Return:pointer for the first string
  */
-char *string_nconcat(char *s1, char *s2, int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j;
-	int s1_length;
-	int s2_length;
+	unsigned int i, j;
+	unsigned int s1_length;
+	unsigned int s2_length;
 	char *p;
 
 	i = 0;
@@ -35,5 +35,6 @@ char *string_nconcat(char *s1, char *s2, int n)
 		p[i] = s1[i];
 	for (j = 0; j < n; j++)
 		p[j + s1_length] = s2[j];
+	p[s1_length + s2_length + 1] = '\0';
 	return (p);
 }
