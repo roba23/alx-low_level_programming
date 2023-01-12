@@ -5,9 +5,12 @@
  * @b: the size to be allocated
  * Return: return 0 if succesfull and 98 if unsuccesfull
  */
-void *malloc_checked(int b)
+void *malloc_checked(unsigned int b)
 {
-	if (malloc(b) == NULL)	
-		exit (98);
-	return (malloc(b));
+	void *p;
+
+	p = malloc(b);
+	if (p == NULL)
+		exit(98);
+        return (p);
 }
