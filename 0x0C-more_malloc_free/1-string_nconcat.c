@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * string_nconcat - concatenate two strings up to n bytes.
  * @s1: source string
@@ -16,11 +17,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (s1count = 0; s1[s1count]; s1count++)
-		;
-	for (s2count = 0; s2[s2count]; s2count++)
-		;
-	s2count > n ? (s2count = n) : (n = s2count);
+	s1count = strlen(s1);
+	s2count = strlen(s2);
+	if (n > s2count)
+		n = s2count;
 	sizeBuffer = s1count + s2count + 1;
 	p = malloc(sizeBuffer * sizeof(char));
 	if (p == NULL)
