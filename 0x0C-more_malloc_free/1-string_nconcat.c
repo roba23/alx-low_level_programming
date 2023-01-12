@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, int n)
 	j = 0;
 	if (s1 == NULL)
 		s1 = "";
-	if (s1 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 	s1_length = (int)strlen(s1);
 	s2_length = (int)strlen(s2);
