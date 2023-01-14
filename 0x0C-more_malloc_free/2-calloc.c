@@ -1,9 +1,9 @@
 #include <stdlib.h>
 /**
- * _calloc - this function allocates a memory size using 
+ * _calloc - this function allocates a memory size using
  * mallloc and assigns it the value zero
  * @size: size of each elements of memory
- * @nmemb: number of elements 
+ * @nmemb: number of elements
  * Return: return pointer to  the allocated space
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -21,4 +21,3 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		s[i] = 0;
 	return (s);
 }
-	
