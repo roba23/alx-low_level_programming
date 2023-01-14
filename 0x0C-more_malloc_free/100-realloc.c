@@ -25,6 +25,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (n);
 	}
 	n = malloc(new_size);
+	for (i = 0; i < new_size; i++)
+		n[i] = 0;
 	n = m;
 	return (n);
 }
