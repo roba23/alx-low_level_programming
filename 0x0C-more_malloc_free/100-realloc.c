@@ -11,6 +11,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *m;
 	char *n;
+	unsigned int i;
+	
+	i = 0;
 	m = ptr;
 	if (old_size == new_size)
 		return (ptr);
