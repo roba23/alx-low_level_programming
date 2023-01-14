@@ -6,10 +6,10 @@
  * @nmemb: number of elements 
  * Return: return pointer to  the allocated space
  */
-void *_calloc(int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *s;
-	int i;
+	unsigned int i;
 
 	i = 0;
 	if (nmemb == 0 || size == 0)
