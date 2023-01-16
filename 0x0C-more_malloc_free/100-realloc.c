@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _realloc- realloc a memory space using malloc
  * @old_size: previous size allocated
@@ -28,9 +29,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (n);
 	}
 	n = malloc(new_size);
-	for (i = 0; i < new_size; i++)
+	for (i = 0; i < (new_size / sizeof(char)); i++)
 		n[i] = 0;
-	for (i = 0; i < old_size; i++)
+	printf("%d\n", i);
+	for (i = 0; i < (old_size / sizeof(char)); i++)
 		n[i] = m[i];
+	printf("%d\n", i);
 	return (n);
 }
