@@ -29,9 +29,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (n);
 	}
 	n = malloc(new_size);
-	for (i = 0; i < (new_size / sizeof(char)); i++)
-		n[i] = 0;
-	printf("%d\n", i);
 	for (i = 0; i < (old_size / sizeof(char)); i++)
 		n[i] = m[i];
 	printf("%d\n", i);
