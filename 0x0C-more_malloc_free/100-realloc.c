@@ -5,7 +5,7 @@
  * @old_size: previous size allocated
  * @new_size: new size to be allocated
  * @ptr :the pointer of the previous memory allocated
- * Return:pointer to the allocated space if succesfull 
+ * Return:pointer to the allocated space if succesfull
  * return null if it fails
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -14,13 +14,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *n;
 	unsigned int i;
 	unsigned int min;
-	
+
 	i = 0;
 	m = ptr;
 	if (old_size == new_size)
 		return (ptr);
 	if (new_size == 0 && ptr != NULL)
-		return (ptr);
+	{
+		free(ptr);
+		return (NULL);
+	}
 	if (ptr == NULL)
 	{
 		n = malloc(new_size);
@@ -28,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (old_size > new_size)
 		min = new_size;
-	else 
+	else
 		min = old_size;
 	n = malloc(new_size);
 	for (i = 0; i < min; i++)
