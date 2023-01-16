@@ -3,7 +3,7 @@
 /**
  * init_dog - a function to initialize elements of a struct
  * @d: struct to be initialized
- * @name: name of dog 
+ * @name: name of dog
  * @age: age of the dog
  * @owner: name of owner
  * Return: Nothing
