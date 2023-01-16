@@ -13,7 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *m;
 	char *n;
 	unsigned int i;
-	unsigned int max;
+	unsigned int min;
 	
 	i = 0;
 	m = ptr;
@@ -30,11 +30,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (n);
 	}
 	if (old_size > new_size)
-		max = old_size;
+		min = new_size;
 	else 
-		max = new_size;
+		min = old_size;
 	n = malloc(new_size);
-	for (i = 0; i < max; i++)
+	for (i = 0; i < min; i++)
 		n[i] = m[i];
 	return (n);
 }
