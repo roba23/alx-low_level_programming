@@ -13,6 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *m;
 	char *n;
 	unsigned int i;
+	unsigned int max;
 	
 	i = 0;
 	m = ptr;
@@ -28,12 +29,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		n = malloc(new_size);
 		return (n);
 	}
+	if (old_size > new_size)
+		max = old_size;
+	else 
+		max = new_size;
 	n = malloc(new_size);
-	if (new_size > old_size)
-	{
-	for (i = 0; i < (old_size / sizeof(char)); i++)
+	for (i = 0; i < max; i++)
 		n[i] = m[i];
-	}
-	printf("%d\n", i);
 	return (n);
 }
