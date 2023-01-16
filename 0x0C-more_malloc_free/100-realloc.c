@@ -20,10 +20,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (old_size == new_size)
 		return (ptr);
 	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
 		return (ptr);
-	}
 	if (ptr == NULL)
 	{
 		n = malloc(new_size);
@@ -36,5 +33,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	n = malloc(new_size);
 	for (i = 0; i < min; i++)
 		n[i] = m[i];
+	free(ptr);
 	return (n);
 }
