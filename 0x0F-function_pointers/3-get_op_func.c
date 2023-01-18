@@ -5,7 +5,7 @@
 /**
  * get_op_func - get pointer to the function to operate with
  * @s: operant character
- * Return: return pointer to afunction if 
+ * Return: return pointer to afunction if
  * sucessfull or null if it fails
  */
 int (*get_op_func(char *s))(int, int)
@@ -21,9 +21,9 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	while (i < 5)
 	{
-		if (strcmp(s, ops[i].op) == 0) 
-			return ops[i].f;
-			
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
+
 		i++;
 	}
 	return (NULL);

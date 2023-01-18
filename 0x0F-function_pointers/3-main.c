@@ -4,14 +4,15 @@
 #include "3-calc.h"
 /**
  * main - function to check calculator
- * @argc: count atrguments 
+ * @argc: count atrguments
  * @argv: array of values
  * Return: nothing
  */
 int main(int argc, char *argv[])
 {
 	int result, num1, num2;
-	int (*fun_point)(int, int);	
+	int (*fun_point)(int, int);
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	if (argc != 4)
