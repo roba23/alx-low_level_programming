@@ -1,11 +1,11 @@
 #include "function_pointers.h"
 #include <stddef.h>
 /**
- * array_iterator - function irates an array and prints it using 
+ * array_iterator - function irates an array and prints it using
  * the function passed pointer to
  * @array: array pointer
  * @size: size of the array passed
- * @action()
+ * @action: function passedn
  *
  * Return: nothing
  */
