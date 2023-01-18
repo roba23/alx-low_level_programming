@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef CALC_H
+#define CALC_H
 /**
  * struct op - struct op
  * @op: operators
@@ -9,7 +9,7 @@ typedef struct op
 {
 	char *op;
 	int (*f)(int, int);
-}op_t;
+} op_t;
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);
 int op_sub(int a, int b);
