@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * print_name - print name  passed to a function
- * @name: name 
+ * @name: name
  * @f(): the function passed
  * Return: Nothing
  */
