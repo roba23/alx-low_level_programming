@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * print_name - print name  passed to a function
  * @name: name
