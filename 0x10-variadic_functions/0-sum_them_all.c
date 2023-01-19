@@ -24,5 +24,5 @@ int sum_them_all(unsigned int n, ...)
 	va_end(args);
 	return (sum);
 }
-	
+
 
