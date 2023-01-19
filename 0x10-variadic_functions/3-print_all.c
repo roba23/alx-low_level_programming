@@ -52,7 +52,7 @@ void for_string(va_list s)
  */
 void print_all(const char * const format, ...)
 {
-	int i, j, len;
+	int i, j;
 	char type[4] = {'c', 'i', 'f', 's'};
 	va_list args;
 	void (*func_point[4])(va_list) = {&for_char,
