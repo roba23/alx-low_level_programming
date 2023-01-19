@@ -1,6 +1,49 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
+/**
+ * for_char - print character
+ * @c: a list of arguments
+ * Return:nothing
+ */
+void for_char(va_list c)
+{
+	printf("%c", va_arg(c, int));
+}
+/**
+ * for_int - print integer
+ * @i: a list of arguments
+ * Return: nothing
+ */
+
+void for_int(va_list i)
+{
+	printf("%d", va_arg(i, int));
+}
+/**
+ * for_float - print float
+ * @f:list of arguments
+ * Return:nothing
+ */
+
+void for_float(va_list f)
+{
+	printf("%f", va_arg(f, double));
+}
+/**
+ * for_string - print string
+ * @s: list of arguments
+ * Return:nothing
+ */
+void for_string(va_list s)
+{
+	char *str = va_arg(s, char *);
+
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
 
 /**
  * print_all - print all arguments of different
@@ -10,11 +53,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, j, len, b;
-	char type[4] = {'c', 'i', 'f', 's'}; 
+	int i, j, len;
+	char type[4] = {'c', 'i', 'f', 's'};
 	va_list args;
-	char a, *d;
-	float c;
+	void (*func_point[4])(va_list) = {&for_char,
+		&for_int, &for_float, &for_string};
+	char *separator = "";
 
 	i = 0;
 	len = (int)strlen(format);
@@ -26,30 +70,9 @@ void print_all(const char * const format, ...)
 		{
 		if (format[i] == type[j])
 		{
-			switch (j)
-			{
-			case 0:
-				a = va_arg(args, int);
-				printf("%c, ", a);
-				break;
-			case 1:
-				b = va_arg(args, int);
-				printf("%d, ", b);
-				break;
-			case 2:
-				c = va_arg(args, double);
-				printf("%f, ", c);
-				break;
-			case 3:
-				d = va_arg(args, char *);
-				if (d == NULL)
-					printf("(nil), ");
-				else
-					printf("%s, ", d);
-				break;
-			default:
-				break;
-			}
+			printf("%s", separator);
+			func_point[j](args);
+			separator = ", ";
 		}
 		++j;
 		}
@@ -58,6 +81,6 @@ void print_all(const char * const format, ...)
 	va_end(args);
 	printf("\n");
 }
-						
+
 
 
