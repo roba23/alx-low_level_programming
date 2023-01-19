@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	print_numbers(", " ,0, 0, 98, -1024);
+	print_numbers(", " ,3, 0, NULL, -1024);
 	return (0);
 }
