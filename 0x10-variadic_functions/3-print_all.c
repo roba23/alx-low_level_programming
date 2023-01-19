@@ -52,7 +52,7 @@ void for_string(va_list s)
  */
 void print_all(const char * const format, ...)
 {
-	int i, j;
+	int i, j, len;
 	char type[4] = {'c', 'i', 'f', 's'};
 	va_list args;
 	void (*func_point[4])(va_list) = {&for_char,
@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	len = (int)strlen(format);
 	va_start(args, format);
-	while (format[i] && format)
+	while (i < len && (format != NULL))
 	{
 		j = 0;
 		while (j < 4)
