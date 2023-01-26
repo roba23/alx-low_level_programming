@@ -7,13 +7,13 @@
  * @str: data to be copied to the new element(NOde)
  * Return: pointer to the last element(Node)
  */
-list_t *add_node_end(list_t **head,const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *m, *n;
 
 	m = malloc(sizeof(list_t));
 	if (m == NULL)
-		return(NULL);
+		return (NULL);
 	m->len = strlen(str);
 	m->str = strdup(str);
 	m->next = NULL;
@@ -23,7 +23,7 @@ list_t *add_node_end(list_t **head,const char *str)
 		return (*head);
 	}
 	n = *head;
-	while(n->next != NULL)
+	while (n->next != NULL)
 		n = n->next;
 	n->next = m;
 
