@@ -1,5 +1,5 @@
 #include <stdio.h>
-void __attribute__((constructor)) print();
+int __attribute__((constructor)) print();
 int print(void);
 /**
  * print - print a statment
