@@ -6,11 +6,12 @@
  * @h: pointer to the first element in the list
  * Return: the number of elements
  */
+size_t count = 0;
+
 size_t list_len(const list_t *h)
 {
-	size_t count = 1;
-
 	count++;
+
 	if (h->next != NULL)
 		list_len(h->next);
 	return (count);
