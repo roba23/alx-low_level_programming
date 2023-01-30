@@ -4,13 +4,13 @@
 /**
  * add_nodeint_end - add node at the end
  * @head:the pointer to the last element
- * @n: integer value to assign 
+ * @n: integer value to assign
  * Return:pointer to the last element
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *current, *new;
-	
+
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
