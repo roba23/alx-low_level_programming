@@ -10,12 +10,12 @@ void free_listint2(listint_t **head)
 {
 	listint_t *m;
 
-	m = *head;
-	if (*head == NULL)
+	if (head == NULL)
 	{
-		printf("Freed!");
+		printf("Freed!\n");
 		return;
 	}
+	m = *head;
 	while (m != NULL)
 	{
 		m = m->next;
