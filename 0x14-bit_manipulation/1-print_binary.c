@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	result = 0.5 * n;
 	remainder = n - (2 * result);
 	n = result;
-	if (n > 0)
+	if (n != 0)
 		print_binary(n);
 	_putchar(remainder + '0');
 }
