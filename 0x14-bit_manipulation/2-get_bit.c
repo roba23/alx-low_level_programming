@@ -10,7 +10,8 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
-	unsigned long int result, remainder;
+	unsigned long int result;
+	int remainder;
 
 	for (i = 0; n != 0; i++)
 	{
