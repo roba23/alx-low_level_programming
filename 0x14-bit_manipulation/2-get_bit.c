@@ -13,7 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int result, remainder;
 
 	if (n == 0)
-		return (0);
+		return (-1);
 	for (i = 0; n != 0; i++)
 	{
 		result = 0.5 * n;
