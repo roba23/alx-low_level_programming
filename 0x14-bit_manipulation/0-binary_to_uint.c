@@ -33,10 +33,10 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum, i, j;
 
-	i = sum = 0;
-	j = (unsigned int)strlen(b) - 1;
 	if (b == NULL)
 		return (0);
+	i = sum = 0;
+	j = (unsigned int)strlen(b) - 1;
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
