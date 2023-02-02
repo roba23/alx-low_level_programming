@@ -12,8 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int i;
 	unsigned long int result, remainder;
 
-	if (index > 7)
-		return (-1);
 	for (i = 0; n != 0; i++)
 	{
 		result = 0.5 * n;
@@ -22,5 +20,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			return (remainder);
 		n = result;
 	}
+	if (index >= i)
+		return (-1);
 	return (0);
 }
