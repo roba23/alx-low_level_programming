@@ -9,6 +9,11 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int result, remainder;
 
+	if (n == '0')
+	{
+		_putchar('0');
+		return;
+	}
 	result = 0.5 * n;
 	remainder = n - (2 * result);
 	n = result;
