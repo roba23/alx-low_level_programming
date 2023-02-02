@@ -9,17 +9,6 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i;
-	unsigned long int result;
-	int remainder;
-
-	for (i = 0; n != 0; i++)
-	{
-		result = 0.5 * n;
-		remainder = n - (2 * result);
-		if (i == index)
-			return (remainder);
-		n = result;
-	}
-	return (-1);
+		return ((index > (8 * sizeof(n) - 1)) ? -1 : (int)(n >> index) & 1);
 }
+
