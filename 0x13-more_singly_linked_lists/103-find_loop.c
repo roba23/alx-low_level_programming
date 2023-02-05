@@ -2,7 +2,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * find_ptr -find if there is a loop
+ * find_loop -find if there is a loop
  * @tortoise: the first pointer
  * @hare: the second pointer
  * Return:pointer to the loop start
