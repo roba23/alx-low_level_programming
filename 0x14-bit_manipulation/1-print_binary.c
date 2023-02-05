@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * print_binary - convert a number to binary and print
  * @n: number
@@ -7,12 +7,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int result, remainder;
+	unsigned long int val;
+	int flag;
 
-	result = 0.5 * n;
-	remainder = n - (2 * result);
-	n = result;
-	if (n != 0)
-		print_binary(n);
-	_putchar(remainder + '0');
+	flag = 0;
+	if (n == 0)
+		_putchar('0');
+	for (val = 1UL << ((sizeof(unsigned long) * 8) - 1); val > 0; val >>= 1)
+	{
+		if ((val & n) != 0)
+			flag = 1;
+		if (((val & n) != 0) && flag == 1)
+			_putchar('1');
+		else if (flag)
+			_putchar('0');
+	}
+
 }
