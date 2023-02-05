@@ -54,7 +54,7 @@ size_t free_listint_safe(listint_t **head)
 	while (temp)
 	{
 		size += sizeof(temp);
-		if (met && (temp->next == ptr))
+		if (met && ((temp->next == ptr) || temp == ptr))
 			m++;
 		temp1 = temp;
 		temp = temp->next;
