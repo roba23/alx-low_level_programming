@@ -55,11 +55,11 @@ size_t free_listint_safe(listint_t **head)
 	{
 		size += sizeof(temp);
 		if (met && ((temp->next == ptr) || temp == ptr))
-			m++;
+			m = 1;
 		temp1 = temp;
 		temp = temp->next;
 		free(temp1);
-		if (m == 2)
+		if (temp == ptr && m)
 			break;
 	}
 	*head = NULL;
