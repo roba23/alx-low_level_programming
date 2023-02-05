@@ -54,12 +54,12 @@ size_t free_listint_safe(listint_t **head)
 	while (temp)
 	{
 		size += 1;
-		if (met && ((temp->next == ptr) || temp == ptr))
+		if (met && (temp == ptr))
 			m = 1;
 		temp1 = temp;
 		temp = temp->next;
 		free(temp1);
-		if (temp == ptr && m)
+		if ((void *)temp == (void *)ptr && m)
 			break;
 	}
 	*head = NULL;
