@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 		m = i;
 	printf("value of m is = %ld\n", m);
 	i = write(1, buffer, m);
-	if (i == -1)
+	if (i == -1 || m < letters)
 		return (0);
 	close(fd);
 	return (m);
