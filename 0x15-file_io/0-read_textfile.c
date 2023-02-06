@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[i] = '\0';
 	lseek(fd, 0, SEEK_SET);
 	i = write(1, buffer, m);
-	if (i == -1 || i < m)
+	if (i == -1 || m != i)
 		return (0);
 	close(fd);
 	return (m);
