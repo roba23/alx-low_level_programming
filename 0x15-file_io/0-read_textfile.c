@@ -27,13 +27,11 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	i = read(fd, buffer, letters);
 	if (i == -1)
 		return (0);
+	m = i;
 	buffer[i] = '\0';
 	lseek(fd, 0, SEEK_SET);
-	if (i < letters)
-		m = i;
-	printf("value of m is = %ld\n", m);
 	i = write(1, buffer, m);
-	if (i == -1 || i < letters)
+	if (i == -1 || m != i)
 		return (0);
 	close(fd);
 	return (m);
