@@ -2,7 +2,6 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include "main.h"
-#include <limits.h>
 /**
  * read_textfile - function reads a text from a file and
  * print it out to stdouts
