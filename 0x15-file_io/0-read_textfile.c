@@ -15,9 +15,9 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 {
 	int fd;
 	ssize_t i, m;
-	char buffer[60000];
+	char buffer[1024];
 
-	if (filename == NULL || letters > SSIZE_MAX)
+	if (filename == NULL)
 		return (0);
 	i = 0;
 	m = letters;
@@ -32,8 +32,6 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	buffer[i] = '\0';
 	lseek(fd, 0, SEEK_SET);
 	i = write(1, buffer, m);
-	if (i == -1 || m != i)
-		return (0);
 	close(fd);
 	return (m);
 }
