@@ -17,14 +17,13 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	ssize_t i, m;
 	char buffer[1024];
 
-	if (filename == NULL)
+	if (filename == NULL || letters == 0)
 		return (0);
 	i = 0;
 	m = letters;
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	printf("value of m is = %ld\n", m);
 	i = read(fd, buffer, letters);
 	if (i == -1)
 		return (0);
