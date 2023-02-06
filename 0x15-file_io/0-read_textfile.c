@@ -11,14 +11,14 @@
  * Return: the number of characters read if successfull
  * or zero if an error occurs
  */
-ssize_t read_textfile(const char *filename, ssize_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t  m;
 	int i;
 	char buffer[65534];
 
-	if (filename == NULL|| size == 0)
+	if (filename == NULL)
 		return (0);
 	i = 0;
 	m = letters;
