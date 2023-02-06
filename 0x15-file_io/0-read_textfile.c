@@ -22,8 +22,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters);
 	fd = open(filename, O_RDONLY);
 	r = read(fd, buffer, letters);
-	buffer[r] = '\0';
-	lseek(fd, 0, SEEK_SET);
 	w = write(1, buffer, r);
 	if (w == -1 || r == -1 || fd == -1 || w != r)
 	{
