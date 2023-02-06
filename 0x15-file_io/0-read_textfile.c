@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 /**
  * read_textfile - function reads a text from a file and
  * print it out to stdouts
@@ -16,7 +17,7 @@ ssize_t read_textfile(const char *filename, ssize_t letters)
 	ssize_t i, m;
 	char buffer[60000];
 
-	if (filename == NULL)
+	if (filename == NULL || letters > SSIZE_MAX)
 		return (0);
 	i = 0;
 	m = letters;
