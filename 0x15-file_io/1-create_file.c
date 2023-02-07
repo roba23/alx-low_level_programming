@@ -20,6 +20,7 @@ int create_file(const char *filename, char *text_content)
 		S_IRUSR | S_IWUSR);
 	if (fd < 0)
 		return (-1);
+	lseek(fd, 0, SEEK_SET);
 	if (strlen(text_content) > 0)
 	{
 		i = write(fd, text_content, strlen(text_content));
