@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	f1 = open(argv[1], O_RDONLY);
 	if (f1 == -1)
 		file_from(argv[1]);
-	f2 = open(argv[2], O_RDONLY | O_WRONLY | O_TRUNC,
+	f2 = open(argv[2], O_CREAT | O_RDONLY | O_WRONLY | O_TRUNC,
 			S_IWUSR | S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (f2 == -1)
 		file_to(argv[2]);
