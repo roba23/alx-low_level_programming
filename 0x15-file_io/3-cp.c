@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int f1, f1r, f2, f2w, c1, c2;
+	int f1, f1r, f2, f2w;
 	char buffer[1024];
 
 	f1r = 1;
@@ -31,20 +31,18 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		f2w = write(f2, buffer, 1024);
-		if (f2 < 0 || f2w < 0)
+		if (f1r != f2w || f2 < 0 || f2w < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	c1 = close(f1);
-	c2 = close(f2);
-	if (c1 < 0)
+	if (close(f1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
 		exit(100);
 	}
-	if (c2 < 0)
+	if (close(f2) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
 		exit(100);
