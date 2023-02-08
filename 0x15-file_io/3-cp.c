@@ -47,8 +47,9 @@ int main(int argc, char *argv[])
 			S_IWUSR | S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (f2 == -1)
 		file_to(argv[2]);
-	while ((f1r = read(f1, buffer, 1024)) > 0)
+	while (f1r)
 	{
+		f1r = read(f1, buffer, 1024);
 		if (f1r < 0)
 			file_from(argv[0]);
 		f2w = write(f2, buffer, 1024);
