@@ -57,7 +57,6 @@ int main(int argc, char *argv[])
 			if (f1r != f2w || f2w < 0)
 				file_to(argv[2]);
 		}
-		f2 = open(argv[2], O_RDONLY | O_APPEND);
 	}
 	if (close(f1) == -1)
 	{
