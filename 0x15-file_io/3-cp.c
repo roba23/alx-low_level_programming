@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	{
 		f1r = read(f1, buffer, 1024);
 		if (f1r == -1)
-			file_from(argv[0]);
+			file_from(argv[1]);
 		if (f1r > 0)
 		{
 			f2w = write(f2, buffer, f1r);
