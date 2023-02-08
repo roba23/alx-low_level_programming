@@ -50,11 +50,14 @@ int main(int argc, char *argv[])
 	while (f1r)
 	{
 		f1r = read(f1, buffer, 1024);
-		if (f1r < 0)
+		if (f1r == -1)
 			file_from(argv[0]);
-		f2w = write(f2, buffer, 1024);
-		if (f1r != f2w || f2w < 0)
-			file_to(argv[2]);
+		if (f1r > 0)
+		{
+			f2w = write(f2, buffer, 1024);
+			if (f1r != f2w || f2w < 0)
+				file_to(argv[2]);
+		}
 	}
 	if (close(f1) == -1)
 	{
