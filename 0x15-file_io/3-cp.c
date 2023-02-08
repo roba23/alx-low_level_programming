@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		f1r = read(f1, buffer, 1024);
 		if (f1r < 0 || f1 < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 		}
 		f2w = write(f2, buffer, 1024);
 		if (f2w < 0 || f2 < 0)
