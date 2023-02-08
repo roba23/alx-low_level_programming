@@ -3,6 +3,27 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * file_from - prints error for file 1
+ * @filename: file name
+ * Return: Nothing
+ */
+void file_from(char *filename)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+	exit(98);
+}
+/**
+ * file_to - printe error if file to has errors
+ * @filename: file name
+ * Return: Nothing
+ */
+void file_to(char *filename)
+{
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+	exit(99);
+}
+
+/**
  * main - the function copies from one file to another
  * @argc: count the number of arguments
  * @argv: array containing arguments
@@ -20,22 +41,19 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	f1 = open(argv[1], O_RDONLY);
+	if (f1 == -1)
+		file_from(argv[1]);
 	f2 = open(argv[2], O_RDONLY | O_WRONLY | O_TRUNC,
 			S_IWUSR | S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	while (f1r)
+	if (f2 == -1)
+		file_to(argv[2]);
+	while ((f1r = read(f1, buffer, 1024)) > 0)
 	{
-		f1r = read(f1, buffer, 1024);
-		if (f1 < 0 || f1r < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
+		if (f1r < 0)
+			file_from(argv[0]);
 		f2w = write(f2, buffer, 1024);
-		if (f1r != f2w || f2 < 0 || f2w < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		if (f1r != f2w || f2w < 0)
+			file_to(argv[2]);
 	}
 	if (close(f1) == -1)
 	{
