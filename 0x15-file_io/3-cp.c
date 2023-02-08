@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 			file_from(argv[0]);
 		if (f1r > 0)
 		{
-			f2w = write(f2, buffer, 1024);
+			f2w = write(f2, buffer, f1r);
 			if (f1r != f2w || f2w < 0)
 				file_to(argv[2]);
 		}
