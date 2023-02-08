@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	f1 = open(argv[1], O_RDONLY);
+	f2 = open(argv[2], O_RDONLY | O_WRONLY | O_TRUNC,
+			S_IWUSR | S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	while (f1r)
 	{
 		f1r = read(f1, buffer, 1024);
