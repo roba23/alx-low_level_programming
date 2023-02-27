@@ -8,7 +8,7 @@
 int _atoi(char *s)
 {
 	int i, j, size;
-	int sign = 1;
+	int sign = -1;
 	int n = 0;
 	int flag;
 	int oc;
@@ -23,12 +23,12 @@ int _atoi(char *s)
 		{
 			flag = 1;
 			n *= 10;
-			n  += (s[i] - '0');
+			n  -= (s[i] - '0');
 		}
 		else if (s[i] != ' ' && s[i] != '-' && s[i] != '+' && flag == 0)
 		{
 			oc = 1;
-			sign = 1;
+			sign = -1;
 		}
 		if ((s[i] == '-' || s[i] == '+') && oc == 0)
 		{
