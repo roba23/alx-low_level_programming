@@ -3,6 +3,7 @@
 #include "main.h"
 /**
  * rot13 - encrypt a message using rot13
+ * @a: the string to be encrypted
  * Return: pointer to the encrypted message
  */
 char *rot13(char *a)
@@ -21,7 +22,7 @@ char *rot13(char *a)
 		for (j = 0; j < 52; j++)
 		{
 			output[i] = a[i];
-			if (a[i] == alpha[j]) 
+			if (a[i] == alpha[j])
 			{
 				output[i] = key[j];
 				break;
