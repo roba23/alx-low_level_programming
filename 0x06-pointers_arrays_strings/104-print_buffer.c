@@ -21,12 +21,16 @@ void print_buffer(char *b, int size)
 	for (i = 0; i < size; i += 10)
 	{
 		printf("%08x: ", i);
-		for (j = i; j < (10 * count); j += 2)
+		for (j = i; j < (10 * count); j ++)
 		{
-			if (j < size)
-				printf("%02x%02x ", b[j], b[j + 1]);
-			else
-				printf("     ");
+			if (j < size && j % 2 == 0)
+				printf("%02x", b[j]);
+			else if (j < size && j % 2 != 0)
+				printf("%02x ", b[j]);
+			if (j >= size && j % 2 == 0)
+				printf("  ");
+			else if (j >= size && j % 2 != 0) 
+				printf("   "); 
 		}
 		for (j = i; j < (10 * count) && j < size; j++)
 		{
