@@ -18,7 +18,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	len1 = strlen(n1);
 	len2 = strlen(n2);
 	lendif = len1 - len2;
-	printf("len1 = %d len2 = %d size_r  = %d\n", len1, len2, size_r);
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		if (i >= lendif)
@@ -45,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else
 		result[len1] = '\0';
-	if ((carry && size_r <= (len1 + 1)) || (carry == 0 && size_r <= len1))
+	if ((carry && size_r <= (len1 + 1)) || (carry == 0 && size_r <= len1 + 1))
 		return (0);
 	for (i = 0; i < size_r; i++)
 	{
