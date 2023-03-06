@@ -32,7 +32,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			result[i] = (sum % 10) + '0';
 			carry = sum / 10;
 		}
-
 	}
 	if (carry)
 	{
