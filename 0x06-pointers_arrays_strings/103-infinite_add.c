@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else
 		result[len1] = '\0';
-	if (size_r <= (len1 + 1))
+	if ((carry && size_r <= (len1 + 1)) || (carry == 0 && size_r <= len1))
 		return (0);
 	for (i = 0; i < size_r; i++)
 	{
