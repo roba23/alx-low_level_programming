@@ -45,11 +45,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	else
 		result[len1] = '\0';
+	if (len1 > size_r)
+		return (0);
 	for (i = 0; i < size_r; i++)
 	{
 		r[i] = result[i];
 	}
-
 	return (r);
 }
 
