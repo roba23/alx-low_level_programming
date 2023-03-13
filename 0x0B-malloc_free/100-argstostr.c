@@ -10,16 +10,16 @@
  */
 char *argstostr(int ac, char **argv)
 {
-	int size, i, j, sum, m;
+	int size, i, j, m;
 	char *hold;
-	i = j = size = sum = m = 0;
+	i = j = size = m = 0;
 	if (ac == 0 || argv == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 			{
-				sum += 1;
+				size += 1;
 
 			}
 	}
