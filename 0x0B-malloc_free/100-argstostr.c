@@ -22,8 +22,9 @@ char *argstostr(int ac, char **argv)
 				size += 1;
 
 			}
+		size += 1;
 	}
-	hold = malloc((sizeof(char) * size) + 1);
+	hold = malloc((sizeof(char) * size) + 1) ;
 	for (i = 0; argv[i]; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
