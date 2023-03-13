@@ -23,8 +23,8 @@ char *argstostr(int ac, char **argv)
 
 			}
 	}
-	hold = malloc((sizeof(char) * size) + size);
-	for (i = 0; i < ac; i++)
+	hold = malloc((sizeof(char) * size) + (size + 1));
+	for (i = 0; argv[i]; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
