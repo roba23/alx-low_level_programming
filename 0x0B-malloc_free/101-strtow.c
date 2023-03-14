@@ -24,7 +24,7 @@ char **strtow(char *str)
 		}
 		if (oc && str[i] == ' ')
 		{
-			size_word[column] = j + 1; 
+			size_word[column] = j; 
 			oc = 0;
 			column += 1;
 			j = 0;
@@ -38,7 +38,7 @@ char **strtow(char *str)
 	p = malloc((sizeof(char **) * column) + 1);
 	for (i = 0; i < column; i++)
 	{
-		p[i] = malloc(size_word[i] * sizeof(char));
+		p[i] = malloc(size_word[i] * sizeof(char) + 1);
 	}
 	j = 0;
 	column = 0;
