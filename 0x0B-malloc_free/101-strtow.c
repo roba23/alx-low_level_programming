@@ -30,7 +30,7 @@ char **strtow(char *str)
 			j = 0;
 		}
 	}
-	if (oc)
+	if (oc == 1)
 		column += 1;
 	printf("column is %d oc is =%d\n", column, oc);
 
