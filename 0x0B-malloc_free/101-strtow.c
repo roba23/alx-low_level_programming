@@ -25,7 +25,7 @@ void find(int *i, int *column, int *j, int *oc, char *str, int *size_word)
 		}
 		if (occu && str[m] == ' ')
 		{
-			size_word[col] = n + 1;
+			size_word[col] = n;
 			occu = 0;
 			col += 1;
 			n = 0;
@@ -60,7 +60,7 @@ char **strtow(char *str)
 	p = malloc((sizeof(char **) * (column + 1)));
 	for (i = 0; i < column; i++)
 	{
-		p[i] = malloc((size_word[i] + 1) * sizeof(char) );
+		p[i] = malloc((size_word[i] + 1) * sizeof(char));
 	}
 	j = column = 0;
 	for (i = 0; str[i]; i++)
