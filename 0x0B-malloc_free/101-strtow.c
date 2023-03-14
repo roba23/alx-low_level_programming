@@ -35,7 +35,7 @@ void find(int *i, int *column, int *j, int *oc, char *str, int *size_word)
 	{
 		col += 1;
 		n += 1;
-	}	
+	}
 	*i = m;
 	*j = n;
 	*column = col;
@@ -63,7 +63,7 @@ char **strtow(char *str)
 	p = malloc((sizeof(char **) * (column + 1)));
 	for (i = 0; i < column; i++)
 	{
-		p[i] = malloc((size_word[i] + 1) * sizeof(char));
+		p[i] = malloc((size_word[i] + 1) * sizeof(char) + column);
 	}
 	j = column = 0;
 	for (i = 0; str[i]; i++)
