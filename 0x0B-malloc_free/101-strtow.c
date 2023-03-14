@@ -34,7 +34,7 @@ void find(int *i, int *column, int *j, int *oc, char *str, int *size_word)
 	if (occu == 1)
 		col += 1;
 	*i = m;
-	*j = n;
+	*j = n + 1;
 	*column = col;
 	*oc = occu;
 
