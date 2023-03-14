@@ -48,9 +48,8 @@ int _atoi(char *s)
   */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, m, n;
 
-	malloc();
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -63,6 +62,12 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
+		
 	}
+	m = _atoi(argv[1]);
+	n = _atoi(argv[2]);
+	printf("%d\n", m * n);
+	
+
 	return (0);
 }
