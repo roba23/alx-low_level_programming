@@ -60,7 +60,7 @@ char **strtow(char *str)
 	p = malloc((sizeof(char **) * (column + 1)));
 	for (i = 0; i < column; i++)
 	{
-		p[i] = malloc(size_word[i] * sizeof(char) + 1);
+		p[i] = malloc((size_word[i] + 1) * sizeof(char) );
 	}
 	j = column = 0;
 	for (i = 0; str[i]; i++)
