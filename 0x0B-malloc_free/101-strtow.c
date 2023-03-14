@@ -30,6 +30,10 @@ char **strtow(char *str)
 			j = 0;
 		}
 	}
+	if (oc)
+		column += 1;
+	printf("column is %d oc is =%d\n", column, oc);
+
 	if (column == 0)
 		return (NULL);
 	p = malloc((sizeof(char *) * column) + 1);
