@@ -13,6 +13,8 @@ char **strtow(char *str)
 	int size_word[45];/*array to hold the size of each word */
 
 	oc = i = column = j = 0;
+	if (str == NULL)
+		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
@@ -28,6 +30,8 @@ char **strtow(char *str)
 			j = 0;
 		}
 	}
+	if (column == 0)
+		return (NULL);
 	p = malloc((sizeof(char *) * column) + 1);
 	for (i = 0; i < column; i++)
 	{
