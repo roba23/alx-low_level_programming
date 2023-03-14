@@ -35,7 +35,7 @@ char **strtow(char *str)
 
 	if (column == 0)
 		return (NULL);
-	p = malloc((sizeof(char *) * column) + 1);
+	p = malloc((sizeof(char **) * column) + 1);
 	for (i = 0; i < column; i++)
 	{
 		p[i] = malloc(size_word[i] * sizeof(char));
