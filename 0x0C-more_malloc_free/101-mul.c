@@ -62,12 +62,12 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
-		
+
 	}
 	m = _atoi(argv[1]);
 	n = _atoi(argv[2]);
 	printf("%d\n", m * n);
-	
+
 
 	return (0);
 }
