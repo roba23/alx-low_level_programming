@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
   * _isdigit - tells if the string consists of digits
   * @argv: pointer to current item in argument
@@ -21,24 +22,58 @@ int _isdigit(char *argv)
 }
 /**
   * _atoi - converts a string of ascii digits to the values they represent
-  * @s: pointer to the source string
+  * @max: maximum range
+  * @min: min number
+  * @op1: operand 1
+  * @op2: operand 2
+  * @num1: the first operand
+  * @num2: the second operand
   * Return: value of digits
   */
-int _atoi(char *s)
+void _atoi(int max, int min, char *op1, char *op2, char *num1, char *num2)
 {
-	int i, result;
+	int i = 0;
 
-	i = result = 0;
-	while (s[i])
+	for (i = max; i >= 0; i--)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		if (i >= (max - min))
 		{
-			result *= 10;
-			result += (s[i] - '0');
+			num1[i] = op1[i];
+			num2[i] = op2[i - (max - min)];
 		}
-		i++;
+		else
+		{
+			num1[i] = op1[i];
+			num2[i] = '0';
+		}
 	}
-	return (result);
+
+}
+/**
+ * multiply - multiply two numbers and print out the result
+ * @m: operand 1
+ * @n: operand 2
+ * @result: the result array
+ * @max: the length of the string
+ * Return: Nothing
+ */
+void multiply(char *m, char *n, char *result, int max)
+{
+	int i;
+	int carry;
+	int res;
+
+	i = res = 0;
+	carry = 0;
+	for (i = max; i >= 0; i--)
+	{
+		printf("%c %c\n", m[i], n[i]);
+		res = ((m[i] - '0') * (n[i] - '0')) + carry;
+		carry = res / 10;
+		printf("i:%d res:%d carry:%d\n", i, res, carry);
+		result[i] = (res % 10) + '0';
+	}
+	result[max + 1] = '\0';
 }
 /**
   * main - main function call
@@ -48,8 +83,11 @@ int _atoi(char *s)
   */
 int main(int argc, char *argv[])
 {
-	int i, m, n;
+	int i, lenm, lenn, max;
+	char m[1024], n[1024], result[1024];
 
+	lenm = strlen(argv[1]);
+	lenn = strlen(argv[2]);
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -64,10 +102,22 @@ int main(int argc, char *argv[])
 		}
 
 	}
-	m = _atoi(argv[1]);
-	n = _atoi(argv[2]);
-	printf("%d\n", m * n);
-
-
+	if (lenm > lenn)
+	{
+		max = lenm - 1;
+		_atoi(lenm - 1, lenn - 1, argv[1], argv[2], m, n);
+	}
+	else if (lenm < lenn)
+	{
+		max = lenn - 1;
+		_atoi(lenn - 1, lenm - 1, argv[2], argv[1], m, n);
+	}
+	else
+	{
+		max = lenn - 1;
+		_atoi(lenm - 1, lenn - 1, argv[1], argv[2], m, n);
+	}
+	multiply(m, n, result, max);
+	printf("%s\n", result);
 	return (0);
 }
