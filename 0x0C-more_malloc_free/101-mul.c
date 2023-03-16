@@ -102,7 +102,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
-
 	}
 	if (lenm > lenn)
 	{
@@ -119,12 +118,11 @@ int main(int argc, char *argv[])
 		max = lenn - 1;
 		_atoi(lenm - 1, lenn - 1, argv[1], argv[2], m, n);
 	}
-	multiply(m, n, result, max);
 	for (i = max; i >= 0; i--)
 	{
 		result[i] = ((m[i] - '0') * (n[i] - '0')) + '0';
 	}
 	result[max + 1] = '\0';
-	printf("%s\n", result);	
+	printf("%s\n", result);
 	return (0);
 }
