@@ -59,7 +59,7 @@ void _atoi(int max, int min, char *op1, char *op2, char *num1, char *num2)
  */
 void multiply(char *m, char *n, char *result, int max)
 {
-	int i;
+	int i, j;
 	int carry;
 	int res;
 
@@ -67,13 +67,15 @@ void multiply(char *m, char *n, char *result, int max)
 	carry = 0;
 	for (i = max; i >= 0; i--)
 	{
-		printf("%c %c\n", m[i], n[i]);
-		res = ((m[i] - '0') * (n[i] - '0')) + carry;
-		carry = res / 10;
-		printf("i:%d res:%d carry:%d\n", i, res, carry);
-		result[i] = (res % 10) + '0';
+		for (j = max; j >= 0; j--)
+		{
+			printf("%c %c\n", m[i], n[i]);
+			res += (((m[j] - '0') * (n[i] - '0')) + carry);
+			carry = res / 10;
+			printf("i:%d res:%d carry:%d\n", i, res, carry);
+			result[i] = res / 10;
+		}
 	}
-	result[max + 1] = '\0';
 }
 /**
   * main - main function call
@@ -118,6 +120,11 @@ int main(int argc, char *argv[])
 		_atoi(lenm - 1, lenn - 1, argv[1], argv[2], m, n);
 	}
 	multiply(m, n, result, max);
-	printf("%s\n", result);
+	for (i = max; i >= 0; i--)
+	{
+		result[i] = ((m[i] - '0') * (n[i] - '0')) + '0';
+	}
+	result[max + 1] = '\0';
+	printf("%s\n", result);	
 	return (0);
 }
